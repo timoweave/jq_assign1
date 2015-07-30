@@ -1,5 +1,7 @@
 # jQuery Assign 1
 
+. load index.html to see the jquery functions execerse.
+
 exercise the following jquery functions:
 
 1. .addClass
