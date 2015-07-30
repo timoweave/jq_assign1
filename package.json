@@ -1,0 +1,19 @@
+{
+  "name": "jq_assign1",
+  "version": "0.0.1",
+  "description": "jQuery ex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timoweave/jq_assign1.git"
+  },
+  "author": "Timothy Shiu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timoweave/jq_assign1/issues"
+  },
+  "homepage": "https://github.com/timoweave/jq_assign1"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "jq_assign1",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/timoweave/jq_assign1",
+  "authors": [
+    "Timothy Shiu <timoweave@gmail.com>"
+  ],
+  "description": "jQuery exercise",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

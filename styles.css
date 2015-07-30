@@ -1,0 +1,46 @@
+* {
+        box-sizing: border-box;
+}
+
+body {
+        font-family: Gill Sans Extrabold, sans-serif;
+        margin: auto;
+        width: 100%;
+        text-align:center;
+}
+
+h1, h2 {
+        align-items: center;
+}
+
+ul {
+        list-style: none;
+}
+
+hr {
+        width: 90%;
+        padding: 0px 40px;
+}
+
+body  div {
+        display:inline-block;
+        width:100%;
+        margin:auto;
+}
+
+button {
+        display: inline-block;
+        vertical-align: middle;
+        padding:10px 40px;
+        width:30%;
+        margin:auto;
+        box-shadow: 4px 4px darkgrey;
+}
+
+button ~ div {
+        display: inline-block;
+        vertical-align: middle;
+        padding:10px 40px;
+        width: 60%;
+        margin:auto;
+}

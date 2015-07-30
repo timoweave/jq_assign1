@@ -1,6 +1,7 @@
 # jQuery Assign 1
 
 exercise the following jquery functions:
+
 1. .addClass
 1. .after
 1. .append
