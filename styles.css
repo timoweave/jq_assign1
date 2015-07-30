@@ -44,3 +44,7 @@ button ~ div {
         width: 60%;
         margin:auto;
 }
+
+button:hover {
+    font-weight: bolder;
+}
