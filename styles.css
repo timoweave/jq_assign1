@@ -48,3 +48,7 @@ button ~ div {
 button:hover {
     font-weight: bolder;
 }
+
+.red-background {
+    background-color: red;
+}

@@ -2,58 +2,109 @@
 var jq_func_exercise_list = [
     {nm: "d01", bn: "addClass", hd: ".addClass",
                 pg: "add a css class that make red paragraph",
-                fn: function() { console.log("addClass"); }},
+                fn: function() {
+                    $('#d01 p').addClass('red-background');
+                }},
     {nm: "d02", bn: "after", hd: ".after",
-                pg: "add an element after, just outside, the current element",
-                fn: function() { console.log("after"); }},
+                pg: "add a span after this <span>span</span> element",
+                fn: function() {
+                    $('#d02 span:first').after($('<span>').html(", <strong>follow</strong>"));
+                }},
     {nm: "d03", bn: "append", hd: ".append",
                 pg: "append an element at the end within the current element",
-                fn: function () {}},
+                fn: function () {
+                    $('#d03 p').append(", <strong>and</strong>");
+                }},
     {nm: "d04", bn: "attr", hd: ".attr",
-                pg: "set background color attribute",
-                fn: function () {}},
+                pg: "check the input type from checkbox to button <input type='checkbox' checked='checked'>hello</input>.",
+                fn: function () {
+                    $('#d04 input').attr("type", "button").attr("value", "button");
+                }},
     {nm: "d05", bn: "before", hd: ".before",
-                pg: "add a paragraph before the topmost paragraph",
-                fn: function () {}},
+                pg: "add a span before this <span>span</span> element",
+                fn: function() {
+                    $('#d05 span:first').before($('<span>').html("<strong>ahead</strong>, "));
+                }},
     {nm: "d06", bn: "html", hd: ".html",
-                pg: "make the content to strong",
-                fn: function () {}},
+                pg: "copy the content from above to here and make it strong",
+                fn: function () {
+                    $("#d06 p").html( "<strong>" + $("#d05 p").html() + "</strong>" + " (copied)");
+                }},
     {nm: "d07", bn: "text", hd: ".text",
-                pg: "change to another literal text",
-                fn: function () {}},
+                pg: "add literal text",
+                fn: function () {
+                    $('#d07 p').append($("<span>").text(' : <whatever-literal> goes here, ; &, <>, [], {} </whatever-literal>'));
+                }},
     {nm: "d08", bn: "val", hd: ".val",
-                pg: "",
-                fn: function () {}},
-    {nm: "d09", bn: "toggle", hd: ".toggle",
-                pg: "",
-                fn: function () {}},
+                pg: "get the value of the <input id='box' type='checkbox' checked='checked'>checkbox</input><span></span>",
+                fn: function () {
+                    $('#d08 p span').html( ', ' + $('#d08 #box:checked').val());
+                }},
+    {nm: "d09", bn: "toggleClass", hd: ".toggleClass",
+                pg: "toggle backgound color",
+                fn: function () {
+                    $('#d09 p').toggleClass('red-background');
+                }},
     {nm: "d10", bn: "hide", hd: ".hide",
-                pg: "hide the right hand side",
-                fn: function () {}},
+                pg: "hide <span>this part of text</span>",
+                fn: function () {
+                    $('#d10 p span').hide();
+                }},
     {nm: "d11", bn: "show", hd: ".show",
                 pg: "hide the right hand side first, then show it again.",
-                fn: function () {}},
+                fn: function () {
+                    $('#d11 p').hide();
+                    setTimeout(function () {
+                        $('#d11 p').show();
+                    }, 2000);
+                }},
     {nm: "d12", bn: "slideDown", hd: ".slideDown",
-                pg: "hide the right hand side first, then show slide it down.",
-                fn: function () {}},
+                pg: "hide the text first, then show slide it down again.",
+                fn: function () {
+                    $("#d12 p").hide();
+                    $("#d12 p").slideDown(2000, function() {
+                        $(this).append('(slided down)');
+                    });
+                }},
     {nm: "d13", bn: "slideToggle", hd: ".slideToggle",
-                pg: "",
-                fn: function () {}},
+                pg: "toggle this text.",
+                fn: function () {
+                    $("#d13 p").slideToggle(2000, function() {
+                        $(this).append('(slided toggle)');
+                    });
+                }},
     {nm: "d14", bn: "slideUp", hd: ".slideUp",
-                pg: "hide the right hand side first, then show slide it up.",
-                fn: function () {}},
+                pg: "hide the text first, then show slide it up.",
+                fn: function () {
+                    $("#d14 p").hide();
+                    $("#d14 p").slideDown(2000, function() {
+                        $(this).append('(slided up)');
+                    });
+                }},
     {nm: "d15", bn: "fadeOut", hd: ".fadeOut",
                 pg: "fade out the right this block",
-                fn: function () {}},
+                fn: function () {
+                    $("#d15 p").fadeOut(1000, function() {
+                        $("#d15 h1").after($('<p>').html('(faded out)'));
+                    });
+                }},
     {nm: "d16", bn: "fadeIn", hd: ".fadeIn",
-                pg: "hide this first, then fade it",
-                fn: function () { $('$d16 div')}},
+                pg: "fade it some <span>text.</span>",
+                fn: function () {
+                    $('#d16 span:last').after($('<span>').html(' ... hello').fadeIn(3000));
+                }},
     {nm: "d17", bn: "focus", hd: ".focus",
-                pg: "",
-                fn: function () {}},
+                pg: "click the left button to setup focus first, then click this <input id='hello' type='text' placeholder=''/>",
+                fn: function () {
+                    $('#d17 #hello').focus(function() {
+                        $(this).attr('placeholder', 'got focus');
+                    });
+                }},
     {nm: "d18", bn: "click", hd: ".click",
                 pg: "each click append a 'dot'",
-                fn: function () { $('#d18 p').append('.')}}
+                fn: function () {
+                    $('#d18 p').append('.');
+                }}
 
 ];
 
